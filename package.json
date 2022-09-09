@@ -1,0 +1,11 @@
+{
+  "name": "mongodb-patterns",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Massimiliano Marcon <me@marcon.me>",
+  "license": "Apache-2.0"
+}
