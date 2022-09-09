@@ -6,9 +6,8 @@ image:
   file: .gitpod.Dockerfile
 
 tasks:
-  - init: npm install
   - name: Get a cluster
-    command: |
+    before: |
       atlas quickstart --default --force --skipSampleData --skipMongosh --clusterName "$GITPOD_WORKSPACE_ID" > /tmp/cluster-info
       username=$(cat /tmp/cluster-info | grep Username | sed 's/.*:\s//')"
       password=$(cat /tmp/cluster-info | grep Password | sed 's/.*:\s//')"
