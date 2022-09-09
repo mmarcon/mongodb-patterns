@@ -7,5 +7,12 @@ image:
 
 tasks:
   - init: npm install
+  - name: Get a cluster
+    command: |
+      atlas quickstart --default --force --skipSampleData --skipMongosh --clusterName "$GITPOD_WORKSPACE_ID" > /tmp/cluster-info
+      username=$(cat /tmp/cluster-info | grep Username | sed 's/.*:\s//')"
+      password=$(cat /tmp/cluster-info | grep Password | sed 's/.*:\s//')"
+      connectionstring=$(cat /tmp/cluster-info | grep string | sed 's/.*:\smongodb+srv:\/\///')"
+      echo "MONGODB_CONNECTION_STRING=mongodb+srv://$username:$password@$connectionstring" > .env
 
-
+# atlas clusters delete "$GITPOD_WORKSPACE_ID" --force
