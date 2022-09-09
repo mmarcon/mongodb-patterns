@@ -8,7 +8,7 @@ RUN sudo apt-get update
 RUN sudo apt-get install -y mongodb-atlas
 
 USER gitpod
-COPY --chown=gitpod:gitpod nvm-lazy.sh /home/gitpod/.nvm/nvm-lazy.sh
+COPY --chown=gitpod:gitpod gitpod-config/nvm-lazy.sh /home/gitpod/.nvm/nvm-lazy.sh
 
 # Install nvm/node
 # Copy-pasted from https://github.com/gitpod-io/workspace-images/blob/481f7600b725e0ab507fbf8377641a562a475625/chunks/lang-node/Dockerfile
