@@ -3,9 +3,11 @@
 # and commit this file to your remote git repository to share the goodness with others.
 
 image:
-  file: .gitpod.Dockerfile
+  file: gitpod-config/.gitpod.Dockerfile
 
 tasks:
+  - name: Install dependencies
+    init: npm i
   - name: Get a cluster
     command: |
       atlas quickstart --default --force --skipSampleData --skipMongosh --clusterName "$GITPOD_WORKSPACE_ID" > /tmp/cluster-info
