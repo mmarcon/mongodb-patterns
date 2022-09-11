@@ -1,0 +1,13 @@
+{
+  "name": "Outlier",
+  "description": "Do you find that there are a few queries or documents that don’t fit into the rest of your typical data patterns? Are these exceptions driving your application solution? If so, the Outlier Pattern is a wonderful solution to this situation.",
+  "pros": [
+    "Prevents a few documents or queries from determining an application’s solution.",
+    "Queries are tailored for “typical” use cases, but outliers are still addressed."
+  ],
+  "cons": [
+    "Often tailored for specific queries, therefore ad hoc queries may not perform well.",
+    "Much of this pattern is done with application code."
+  ],
+  "notes": ""
+}

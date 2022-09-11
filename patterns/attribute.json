@@ -1,0 +1,10 @@
+{
+  "name": "Attribute",
+  "description": "The Attribute Pattern is useful for problems that are based around having big documents with many similar fields but there is a subset of fields that share common characteristics and we want to sort or query on that subset of fields. When the fields we need to sort on are only found in a small subset of documents. Or when both of those conditions are met within the documents.",
+  "pros": [
+    "Fewer indexes are needed.",
+    "Queries become simpler to write and are generally faster."
+  ],
+  "cons": [],
+  "notes": ""
+}

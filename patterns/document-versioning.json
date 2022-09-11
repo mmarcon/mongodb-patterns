@@ -1,0 +1,13 @@
+{
+  "name": "Document Versioning",
+  "description": "When you are faced with the need to maintain previous versions of documents in MongoDB, the Document Versioning pattern is a possible solution.",
+  "pros": [
+    "Easy to implement, even on existing systems.",
+    "No performance impact on queries on the latest revision."
+  ],
+  "cons": [
+    "Doubles the number of writes.",
+    "Queries need to target the correct collection."
+  ],
+  "notes": ""
+}

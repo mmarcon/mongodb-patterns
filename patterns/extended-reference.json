@@ -1,0 +1,12 @@
+{
+  "name": "Extended Reference",
+  "description": "You will find the Extended Reference pattern most useful when your application is experiencing lots of JOIN operations to bring together frequently accessed data.",
+  "pros": [
+    "Improves performance when there are a lot of JOIN operations.",
+    "Faster reads and a reduction in the overall number of JOINs."
+  ],
+  "cons": [
+    "Data duplication."
+  ],
+  "notes": ""
+}

@@ -15,7 +15,9 @@ tasks:
       password=$(cat /tmp/cluster-info | grep Password | sed 's/.*:\s//')
       connectionstring=$(cat /tmp/cluster-info | grep string | sed 's/.*:\smongodb+srv:\/\///')
       rm /tmp/cluster-info
-      echo "MONGODB_CONNECTION_STRING=mongodb+srv://$username:$password@$connectionstring" > .env
+      MONGODB_CONNECTION_STRING="mongodb+srv://$username:$password@$connectionstring"
+      echo "MONGODB_CONNECTION_STRING=${MONGODB_CONNECTION_STRING}" > .env
+      mongosh $MONGODB_CONNECTION_STRING patters/_load.js
 
 vscode:
   extensions:

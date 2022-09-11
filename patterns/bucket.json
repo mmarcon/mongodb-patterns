@@ -1,0 +1,11 @@
+{
+  "name": "Bucket",
+  "description": "The Bucket Pattern is a great solution for when needing to manage streaming data, such as time-series, real-time analytics, or Internet of Things (IoT) applications.",
+  "pros": [
+    "Reduces the overall number of documents in a collection.",
+    "Improves index performance.",
+    "Can simplify data access by leveraging pre-aggregation."
+  ],
+  "cons": [],
+  "notes": "In MongoDB 5.0+ Timeseries collections are a good replacement for the Bucket pattern."
+}

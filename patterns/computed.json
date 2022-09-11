@@ -1,0 +1,13 @@
+{
+  "name": "Computed",
+  "description": "When there are very read intensive data access patterns and that data needs to be repeatedly computed by the application, the Computed Pattern is a great option to explore.",
+  "pros": [
+    "Reduction in CPU workload for frequent computations.",
+    "Queries become simpler to write and are generally faster."
+  ],
+  "cons": [
+    "It may be difficult to identify the need for this pattern.",
+    "Applying or overusing the pattern should be avoided unless needed."
+  ],
+  "notes": ""
+}
