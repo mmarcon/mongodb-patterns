@@ -17,4 +17,9 @@ tasks:
       rm /tmp/cluster-info
       echo "MONGODB_CONNECTION_STRING=mongodb+srv://$username:$password@$connectionstring" > .env
 
+vscode:
+  extensions:
+    - mongodb.mongodb-vscode
+    - standard.vscode-standard
+
 # atlas clusters delete "$GITPOD_WORKSPACE_ID" --force
