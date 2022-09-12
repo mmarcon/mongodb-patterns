@@ -9,6 +9,7 @@
   "author": "Massimiliano Marcon <me@marcon.me>",
   "license": "Apache-2.0",
   "dependencies": {
+    "chalk": "^5.0.1",
     "dotenv": "^16.0.2",
     "mongodb": "^4.9.1"
   },
