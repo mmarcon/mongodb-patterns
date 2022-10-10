@@ -6,6 +6,7 @@ function atlas_up() {
   rm /tmp/cluster-info
   MONGODB_CONNECTION_STRING="mongodb+srv://$username:$password@$connectionstring"
   echo "MONGODB_CONNECTION_STRING=${MONGODB_CONNECTION_STRING}" > .env
+  return MONGODB_CONNECTION_STRING
 }
 
 function atlas_down() {

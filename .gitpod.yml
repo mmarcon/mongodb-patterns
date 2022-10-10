@@ -11,7 +11,7 @@ tasks:
     init: npm i
   - name: Get a cluster
     command: |
-      atlas_up
+      MONGODB_CONNECTION_STRING=$(atlas_up)
       sleep 5
       mongosh $MONGODB_CONNECTION_STRING patterns/_load.js
 
