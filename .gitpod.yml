@@ -10,20 +10,9 @@ tasks:
   - name: Install dependencies
     init: npm i
   - name: Get a cluster
-    command: |
-      atlas quickstart --default --force --skipSampleData --skipMongosh --clusterName "$GITPOD_WORKSPACE_ID" > /tmp/cluster-info
-      username=$(cat /tmp/cluster-info | grep Username | sed 's/.*:\s//')
-      password=$(cat /tmp/cluster-info | grep Password | sed 's/.*:\s//')
-      connectionstring=$(cat /tmp/cluster-info | grep string | sed 's/.*:\smongodb+srv:\/\///')
-      rm /tmp/cluster-info
-      MONGODB_CONNECTION_STRING="mongodb+srv://$username:$password@$connectionstring"
-      echo "MONGODB_CONNECTION_STRING=${MONGODB_CONNECTION_STRING}" > .env
-      sleep 5
-      mongosh $MONGODB_CONNECTION_STRING patterns/_load.js
+    command: atlas_up
 
 vscode:
   extensions:
     - mongodb.mongodb-vscode
     - standard.vscode-standard
-
-# atlas clusters delete "$GITPOD_WORKSPACE_ID" --force

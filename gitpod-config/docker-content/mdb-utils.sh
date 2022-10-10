@@ -10,6 +10,8 @@ function atlas_up() {
 
 function atlas_down() {
   atlas clusters delete "$GITPOD_WORKSPACE_ID" --force
+  # Remove .env file if it exists but ignore errors if it does not exist
+  rm .env 2> /dev/null || true
 }
 
 export -f atlas_up
