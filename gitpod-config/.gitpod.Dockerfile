@@ -10,3 +10,7 @@ RUN sudo apt-get install -y mongodb-atlas
 # Install Node 18
 RUN curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
 RUN sudo apt-get install -y nodejs
+
+# Copy Atlas script
+COPY mdb-utils.sh /home/gitpod/.mdb-utils.sh
+RUN echo "source .mdb-utils.sh" >> .bashrc

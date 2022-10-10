@@ -4,6 +4,7 @@
 
 image:
   file: gitpod-config/.gitpod.Dockerfile
+  context: gitpod-config/docker-content
 
 tasks:
   - name: Install dependencies
