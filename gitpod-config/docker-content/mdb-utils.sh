@@ -4,9 +4,9 @@ function atlas_up() {
   password=$(cat /tmp/cluster-info | grep Password | sed 's/.*:\s//')
   connectionstring=$(cat /tmp/cluster-info | grep string | sed 's/.*:\smongodb+srv:\/\///')
   rm /tmp/cluster-info
-  MONGODB_CONNECTION_STRING="mongodb+srv://$username:$password@$connectionstring"
+  local MONGODB_CONNECTION_STRING="mongodb+srv://$username:$password@$connectionstring"
   echo "MONGODB_CONNECTION_STRING=${MONGODB_CONNECTION_STRING}" > .env
-  return $MONGODB_CONNECTION_STRING
+  echo "$MONGODB_CONNECTION_STRING"
 }
 
 function atlas_down() {
