@@ -10,7 +10,10 @@ tasks:
   - name: Install dependencies
     init: npm i
   - name: Get a cluster
-    command: atlas_up
+    command: |
+      atlas_up
+      sleep 5
+      mongosh $MONGODB_CONNECTION_STRING patterns/_load.js
 
 vscode:
   extensions:
