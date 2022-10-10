@@ -12,5 +12,5 @@ RUN curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
 RUN sudo apt-get install -y nodejs
 
 # Copy Atlas script
-COPY mdb-utils.sh /home/gitpod/.mdb-utils.sh
-RUN echo "source ~/.mdb-utils.sh" >> .bash_aliases
+COPY mongodb-utils.sh /home/gitpod/.mongodb-utils.sh
+RUN echo "source ~/.mongodb-utils.sh" >> .bash_aliases
