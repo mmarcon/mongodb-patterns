@@ -13,4 +13,4 @@ RUN sudo apt-get install -y nodejs
 
 # Copy Atlas script
 COPY mdb-utils.sh /home/gitpod/.mdb-utils.sh
-RUN echo "source .mdb-utils.sh" >> .bashrc
+RUN echo "source ~/.mdb-utils.sh" >> .bash_aliases

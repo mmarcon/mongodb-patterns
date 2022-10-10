@@ -11,3 +11,6 @@ function atlas_up() {
 function atlas_down() {
   atlas clusters delete "$GITPOD_WORKSPACE_ID" --force
 }
+
+export -f atlas_up
+export -f atlas_down
