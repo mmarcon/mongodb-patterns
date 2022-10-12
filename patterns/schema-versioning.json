@@ -1,0 +1,14 @@
+{
+  "name": "Schema Versioning",
+  "description": "Just about every application can benefit from the Schema Versioning Pattern as changes to the data schema frequently occur in an application’s lifetime. This pattern allows for previous and current versions of documents to exist side by side in a collection.",
+  "pros": [
+    "No downtime needed.",
+    "Control of schema migration.",
+    "Reduced future technical debt."
+  ],
+  "cons": [
+    "Doubles the number of writes.",
+    "Queries need to target the correct collection."
+  ],
+  "notes": ""
+}
