@@ -9,11 +9,12 @@ image:
 tasks:
   - name: Install dependencies
     init: npm i
-  - name: Get a cluster
+  - name: Get a cluster + Seed it with test data + Create Atlas Search Index
     command: |
       MONGODB_CONNECTION_STRING=$(atlas_up)
       sleep 5
       mongosh $MONGODB_CONNECTION_STRING patterns/_load.js
+      patterns/_create-search-index.sh
 
 vscode:
   extensions:
