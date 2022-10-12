@@ -5,7 +5,7 @@ const DB = 'mongodb_patterns';
 const COLLECTION = 'patterns';
 
 // Drop collection if it exists
-db.getSiblingDB(DB).getCollection(COLLECTION).drop();
+db.getSiblingDB(DB).getCollection(COLLECTION).deleteMany({});
 
 // List JSON files
 console.log(`Loading files in ${__dirname}`);
