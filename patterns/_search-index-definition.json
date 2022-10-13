@@ -1,7 +1,7 @@
 {
     "name": "patterns-search-index",
-    "collectionName": "mongodb_patterns",
-    "database": "patterns",
+    "collectionName": "patterns",
+    "database": "mongodb_patterns",
     "mappings": {
       "dynamic": true
     }
