@@ -23,7 +23,7 @@ In the workspace, the following commands are available:
 
 ### Caveats
 
-When the Atlas cluster is created, the Atlas CLI automatically adds an access rule to the Atlas project to connect from the IP address associated with the Github workspace. Those access rules are not cleaned up when the cluster is terminated.
+When the Atlas cluster is created, the Atlas CLI automatically adds an access rule and a database user to the Atlas project to connect from the IP address associated with the Github workspace. The access rule and database user are not cleaned up when the cluster is terminated.
 
 # Requirements
 
