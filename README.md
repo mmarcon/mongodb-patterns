@@ -4,6 +4,27 @@ Little cute Node.js application that prints out a random MongodDB data modeling 
 
 This sample app was built to test out how to use [MongoDB Atlas](https://mongodb.com/atlas) with [Gitpod](https://gitpod.io).
 
+## What's available in the Gitpod environment
+
+This repository is configured to be able to start coding right away. When the environment boots up, the following things happen:
+
+* The Gitpod workspace starts up, and VS Code is configured with the [Standard](https://marketplace.visualstudio.com/items?itemName=standard.vscode-standard) extension and the MongoDB for [VS Code extension](https://marketplace.visualstudio.com/items?itemName=mongodb.mongodb-vscode);
+* The Node.js dependencies are installed;
+* A free MongoDB Atlas cluster is created, with the same name as the Gitpod workspace;
+* A `.env` file is created, containing a `MONGODB_CONNECTION_STRING` variable set to the connection string for the cluster that was created;
+* The cluster is seeded with sample data, with a script for the MongoDB Shell (`mongosh`);
+* An Atlas Search index is created to support full-text search use cases.
+
+In the workspace, the following commands are available:
+* `atlas`: the Atlas CLI to manage your clusters, search indexes and more;
+* `mongosh`: the MongoDB Shell;
+* `atlas_up`: a helper script to create the Atlas cluster associated with the Gitpod workspace. This is the script that Gitpod runs when the workspace is created;
+* `atals_down`: a helper script to terminate the  Atlas cluster associated with the Gitpod workspace. As there is no tear-down hook in Gitpod, it is recommended to run this command manually before terminating the environment.
+
+### Caveats
+
+When the Atlas cluster is created, the Atlas CLI automatically adds an access rule to the Atlas project to connect from the IP address associated with the Github workspace. Those access rules are not cleaned up when the cluster is terminated.
+
 # Requirements
 
 For this setup to work correctly you need the following:
