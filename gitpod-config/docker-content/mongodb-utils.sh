@@ -15,5 +15,14 @@ function atlas_down() {
   rm .env 2> /dev/null || true
 }
 
+function atlas_cleanup_when_done() {
+  # https://github.com/gitpod-io/gitpod/issues/3966#issuecomment-1264520737
+  trap 'atlas_down; exit' SIGTERM;
+  printf '\033[3J\033c\033[3J%s\n' 'Waiting for SIGTERM ...';
+  exec {sfd}<> <(:);
+  until read -t 3600 -u $sfd; do continue; done;
+}
+
 export -f atlas_up
 export -f atlas_down
+export -f atlas_cleanup_when_done
