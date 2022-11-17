@@ -15,6 +15,9 @@ tasks:
       sleep 5
       mongosh $MONGODB_CONNECTION_STRING patterns/_load.js
       patterns/_create-search-index.sh
+  - name: Cleanup Atlas Cluster
+    command: |
+      atlas_cleanup_when_done
 
 vscode:
   extensions:
